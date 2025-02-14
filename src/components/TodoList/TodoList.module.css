@@ -1,0 +1,43 @@
+.todoList {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box {
+    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 6px;
+}
+
+.box::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}

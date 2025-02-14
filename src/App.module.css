@@ -1,0 +1,33 @@
+.container {
+    background: white;
+    padding: 70px 80px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filterDropdown {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filterDropdown label {
+    margin-right: 10px;
+}
+
+.filterDropdown select {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.filterDropdown select:hover {
+    border-color: #bbb;
+}
