@@ -23,8 +23,14 @@ export default function TodoItem({ todo, deleteTodo, toggleComplete, editTodo })
   }
 
   return (
-    <li className={`${styles.todoItem} ${todo.completed ? styles.completed : ""}`}>
-      <input type="checkbox" checked={todo.completed} onChange={() => toggleComplete(todo.id)} />
+    <li
+      className={`${styles.todoItem} ${todo.completed ? styles.completed : ""}`}
+    >
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => toggleComplete(todo.id)}
+      />
 
       {isEditing ? (
         <input
@@ -37,8 +43,10 @@ export default function TodoItem({ todo, deleteTodo, toggleComplete, editTodo })
         <span>{todo.text}</span>
       )}
 
-      <button onClick={() => handleEditClick(true)}>✏️</button>
-      <button onClick={() => deleteTodo(todo.id)}>🗑️</button>
+      <div className={styles.btns}>
+        <button onClick={() => handleEditClick(true)}>✏️</button>
+        <button onClick={() => deleteTodo(todo.id)}>🗑️</button>
+      </div>
     </li>
   );
 }

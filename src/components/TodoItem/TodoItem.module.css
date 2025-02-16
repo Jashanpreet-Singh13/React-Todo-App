@@ -3,42 +3,63 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 10px 14px;
-    background: #fff;
-    border-radius: 6px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-radius: 8px;
     border: 1px solid #ddd;
     transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .todoItem:hover {
-    background: #f8f9fa;
+    background: #f1f3f5;
     transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .completed span {
     text-decoration: line-through;
     color: #888;
+    font-style: italic;
+}
+
+.todoItem input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #28a745;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.todoItem input[type="checkbox"]:hover {
+    transform: scale(1.1);
 }
 
 .todoItem input[type="text"] {
     flex: 1;
-    padding: 6px 10px;
+    padding: 8px 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-weight: 500;
+    border: 2px solid #ccc;
+    border-radius: 6px;
     outline: none;
-    transition: border-color 0.3s ease;
+    background: #fafafa;
+    transition: all 0.3s ease-in-out;
 }
 
 .todoItem input[type="text"]:focus {
     border-color: #007bff;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.todoItem input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    accent-color: #28a745;
-    cursor: pointer;
+.todoItem .actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
 }
 
 .todoItem button {
@@ -46,20 +67,50 @@
     align-items: center;
     justify-content: center;
     padding: 6px;
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
     background: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .todoItem button:hover {
-    color: #dc3545;
     transform: scale(1.1);
 }
 
-.todoItem button:first-of-type:hover {
+.todoItem button:first-of-type {
     color: #007bff;
+}
+
+.todoItem button:last-of-type {
+    color: #dc3545;
+}
+
+.todoItem button:first-of-type:hover {
+    color: #0056b3;
+}
+
+.todoItem button:last-of-type:hover {
+    color: #a71d2a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todoItem {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.btns {
+    display: flex;
 }

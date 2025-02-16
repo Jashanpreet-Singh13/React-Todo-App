@@ -2,44 +2,75 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 14px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 10px auto;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.todoInput:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 .todoInput input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     border: 2px solid #ddd;
-    border-radius: 6px;
+    border-radius: 8px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #f8f8f8;
+    font-weight: 500;
 }
 
 .todoInput input:focus {
-    border-color: #28a745;
+    border-color: #007bff;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
 .todoInput button {
-    background: #28a745;
+    background: #007bff;
     color: white;
     border: none;
-    padding: 10px 16px;
+    padding: 12px 18px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
 }
 
 .todoInput button:hover {
-    background: #218838;
-    transform: scale(1.05);
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .todoInput button:active {
-    background: #1e7e34;
-    transform: scale(1);
+    background: #004494;
+    transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todoInput {
+    animation: fadeIn 0.3s ease-in-out;
 }
